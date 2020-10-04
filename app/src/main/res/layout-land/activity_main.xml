@@ -5,76 +5,79 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginStart="@dimen/app_horizontal_margin"
-    android:layout_marginEnd="@dimen/app_horizontal_margin"
     android:layout_marginTop="@dimen/app_vertical_margin"
+    android:layout_marginEnd="@dimen/app_horizontal_margin"
     android:layout_marginBottom="@dimen/app_vertical_margin"
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/main_logo"
+        android:layout_width="139dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="60dp"
         android:tint="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        tools:layout_editor_absoluteX="31dp" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="485dp"
+        android:layout_height="195dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/main_logo"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/email_title"
+            android:id="@+id/main_email_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/main_email_hint" />
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/main_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/email_title"
+            android:layout_below="@id/main_email_title"
             android:hint="@string/main_email_hint"
             android:inputType="textEmailAddress" />
 
         <TextView
-            android:id="@+id/password_title"
+            android:id="@+id/main_password_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/email"
+            android:layout_below="@id/main_email"
             android:layout_marginTop="@dimen/app_vertical_separation"
             android:text="@string/main_password_hint" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/main_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/password_title"
+            android:layout_below="@id/main_password_title"
             android:hint="@string/main_password_hint"
             android:inputType="textPassword" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/password"
+            android:layout_below="@id/main_password"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/app_vertical_separation"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/cancel"
+                android:id="@+id/main_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/main_cancel_btn" />
 
             <Button
-                android:id="@+id/validate"
+                android:id="@+id/main_validate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/app_horizontal_separation"
@@ -84,14 +87,13 @@
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/new_account"
+    <TextView
+        android:id="@+id/main_new_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/main_create_account"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="195dp"
+        tools:layout_editor_absoluteY="324dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

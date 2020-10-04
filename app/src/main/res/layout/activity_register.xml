@@ -5,20 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginStart="@dimen/app_horizontal_margin"
-    android:layout_marginEnd="@dimen/app_horizontal_margin"
     android:layout_marginTop="@dimen/app_vertical_margin"
+    android:layout_marginEnd="@dimen/app_horizontal_margin"
     android:layout_marginBottom="@dimen/app_vertical_margin"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:tint="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+    tools:context=".RegisterActivity">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -84,8 +74,8 @@
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/new_account"
+    <TextView
+        android:id="@+id/register_new_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/main_create_account"
@@ -93,5 +83,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="243dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.132"
+        app:srcCompat="@drawable/mandelbrot_set" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
