@@ -44,11 +44,11 @@ abstract class BaseActivity : AppCompatActivity() {
         }
 
         validateButton.setOnClickListener {
-            this.setOnClickListener();
+            this.setValidateOnClickListener();
         }
     }
 
-    open fun setOnClickListener() {
+    open fun setValidateOnClickListener() {
         //on réinitialise les messages d'erreur
         email.error = null
         password.error = null
@@ -72,7 +72,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
             // Pour les fonctions lambda, on doit préciser à quelle fonction l'appel à return
             // doit être appliqué
-            return@setOnClickListener
+            return@setValidateOnClickListener
         }
     }
 

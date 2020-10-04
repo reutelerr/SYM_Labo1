@@ -2,12 +2,8 @@ package ch.heigvd.iict.sym.labo1
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 
 
 const val labo1_EMAIL=""
@@ -46,8 +42,8 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    override fun setOnClickListener(){
-        super.setOnClickListener();
+    override fun setValidateOnClickListener(){
+        super.setValidateOnClickListener();
 
         //on récupère le contenu de deux champs dans des variables de type String
         val emailInput = email.text?.toString()

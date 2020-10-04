@@ -1,11 +1,7 @@
 package ch.heigvd.iict.sym.labo1
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
-import android.widget.EditText
 
 class RegisterActivity : BaseActivity() {
 
@@ -16,8 +12,8 @@ class RegisterActivity : BaseActivity() {
         // on définit le layout à utiliser pour l'affichage
     }
 
-    override fun setOnClickListener() {
-        super.setOnClickListener()
+    override fun setValidateOnClickListener() {
+        super.setValidateOnClickListener()
         val emailInput = email.text?.toString()
         val passwordInput = password.text?.toString()
         val intent = Intent(this, MainActivity::class.java)
