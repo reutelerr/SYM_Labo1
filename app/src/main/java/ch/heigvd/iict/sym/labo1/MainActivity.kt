@@ -42,22 +42,25 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    override fun setValidateOnClickListener(){
-        super.setValidateOnClickListener();
-
-        //on récupère le contenu de deux champs dans des variables de type String
-        val emailInput = email.text?.toString()
-        val passwordInput = password.text?.toString()
-        if (!credentials.contains(Pair(emailInput, passwordInput))) {
-            var builder = AlertDialog.Builder(this)
-            builder.setMessage("Invalid credentials")
-            builder.create().show()
-        } else {
-            val intent = Intent(this, ShowYourFaceActivity::class.java).apply {
-                putExtra(labo1_EMAIL, emailInput)
+    override fun setValidateOnClickListener() : Boolean {
+        if(super.setValidateOnClickListener())
+        {
+            //on récupère le contenu de deux champs dans des variables de type String
+            val emailInput = email.text?.toString()
+            val passwordInput = password.text?.toString()
+            if (!credentials.contains(Pair(emailInput, passwordInput))) {
+                var builder = AlertDialog.Builder(this)
+                builder.setMessage("Invalid credentials")
+                builder.create().show()
+            } else {
+                val intent = Intent(this, ShowYourFaceActivity::class.java).apply {
+                    putExtra(labo1_EMAIL, emailInput)
+                }
+                startActivity(intent)
+                return true
             }
-            startActivity(intent)
         }
+        return false
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

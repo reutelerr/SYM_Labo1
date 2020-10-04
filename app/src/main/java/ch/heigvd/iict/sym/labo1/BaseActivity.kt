@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -48,7 +49,7 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
-    open fun setValidateOnClickListener() {
+    open fun setValidateOnClickListener() : Boolean {
         //on réinitialise les messages d'erreur
         email.error = null
         password.error = null
@@ -64,16 +65,22 @@ abstract class BaseActivity : AppCompatActivity() {
             // la méthode getString permet de charger un String depuis les ressources de
             // l'application à partir de son id
             if (emailInput.isNullOrEmpty()) {
-                email.error = getString(R.string.main_mandatory_field)
+                email.error = getString(R.string.mandatory_field)
             }
 
             if (passwordInput.isNullOrEmpty())
-                password.error = getString(R.string.main_mandatory_field)
-
-            // Pour les fonctions lambda, on doit préciser à quelle fonction l'appel à return
-            // doit être appliqué
-            return@setValidateOnClickListener
+                password.error = getString(R.string.mandatory_field)
+            return false
         }
+        if (!emailInput!!.contains("@")) {
+            val text = "Invalid email"
+            val duration = Toast.LENGTH_SHORT
+
+            val toast = Toast.makeText(applicationContext, text, duration)
+            toast.show()
+            return false
+        }
+        return true
     }
 
     override fun onStart() {

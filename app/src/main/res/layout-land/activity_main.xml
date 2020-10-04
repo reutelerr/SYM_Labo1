@@ -36,14 +36,14 @@
             android:id="@+id/main_email_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/main_email_hint" />
+            android:text="@string/email_hint" />
 
         <EditText
             android:id="@+id/main_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/main_email_title"
-            android:hint="@string/main_email_hint"
+            android:hint="@string/email_hint"
             android:inputType="textEmailAddress" />
 
         <TextView
@@ -52,14 +52,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/main_email"
             android:layout_marginTop="@dimen/app_vertical_separation"
-            android:text="@string/main_password_hint" />
+            android:text="@string/password_hint" />
 
         <EditText
             android:id="@+id/main_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/main_password_title"
-            android:hint="@string/main_password_hint"
+            android:hint="@string/password_hint"
             android:inputType="textPassword" />
 
         <LinearLayout
@@ -74,14 +74,14 @@
                 android:id="@+id/main_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/main_cancel_btn" />
+                android:text="@string/cancel_btn" />
 
             <Button
                 android:id="@+id/main_validate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/app_horizontal_separation"
-                android:text="@string/main_validate_btn" />
+                android:text="@string/validate_btn" />
 
         </LinearLayout>
 
@@ -91,7 +91,7 @@
         android:id="@+id/main_new_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/main_create_account"
+        android:text="@string/create_account"
         android:textColor="@color/colorPrimary"
         tools:layout_editor_absoluteX="195dp"
         tools:layout_editor_absoluteY="324dp" />
