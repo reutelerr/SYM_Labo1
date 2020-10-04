@@ -28,4 +28,8 @@ class RegisterActivity : BaseActivity() {
         setResult(RESULT_OK, intent)
         finish()
     }
+
+    companion object {
+        private const val TAG: String = "RegisterActivity"
+    }
 }

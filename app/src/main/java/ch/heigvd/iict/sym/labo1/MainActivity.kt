@@ -75,4 +75,8 @@ class MainActivity : BaseActivity() {
             }
         }
     } //onActivityResult
+
+    companion object {
+        private const val TAG: String = "MainActivity"
+    }
 }

@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 
 abstract class BaseActivity : AppCompatActivity() {
+
     // le modifieur lateinit permet de définir des variables avec un type non-null
     // sans pour autant les initialiser immédiatement
     protected lateinit var email: EditText
@@ -15,6 +16,7 @@ abstract class BaseActivity : AppCompatActivity() {
     protected lateinit var validateButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d(TAG, "Labo - onCreate called")
         // l'appel à la méthode onCreate de la super classe est obligatoire
         super.onCreate(savedInstanceState)
         // on définit le layout à utiliser pour l'affichage
@@ -72,6 +74,26 @@ abstract class BaseActivity : AppCompatActivity() {
             // doit être appliqué
             return@setOnClickListener
         }
+    }
+
+    override fun onStart() {
+        Log.d(this.localClassName, "Labo - onStart called")
+        super.onStart()
+    }
+
+    override fun onResume() {
+        Log.d(this.localClassName, "Labo - onResume called")
+        super.onResume()
+    }
+
+    override fun onPause() {
+        Log.d(this.localClassName, "Labo - onPause called")
+        super.onPause()
+    }
+
+    override fun onStop() {
+        Log.d(this.localClassName, "Labo - onStop called")
+        super.onStop()
     }
 
     // En Kotlin, les variables static ne sont pas tout à fait comme en Java

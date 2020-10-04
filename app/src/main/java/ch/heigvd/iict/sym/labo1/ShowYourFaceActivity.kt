@@ -17,4 +17,8 @@ class ShowYourFaceActivity : AppCompatActivity() {
 
         ImageDownloader(imageView, "https://thispersondoesnotexist.com/image").show()
     }
+
+    companion object {
+        private const val TAG: String = "ShowYourFaceActivity"
+    }
 }
